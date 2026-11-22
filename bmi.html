@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أدواتك | حاسبة مؤشر كتلة الجسم BMI وتقييم اللياقة</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    .bmi-badge {
+      display: inline-block;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+    .status-normal { background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid #10b981; }
+    .status-overweight { background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid #f59e0b; }
+    .status-underweight { background: rgba(59, 130, 246, 0.2); color: #3b82f6; border: 1px solid #3b82f6; }
+    .status-obese { background: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid #ef4444; }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <span class="icon">💪</span>
+        <h2>أدواتك<span>.Tools</span></h2>
+      </div>
+      <p class="tagline">حاسبة مؤشر كتلة الجسم (BMI) وتقييم اللياقة البدنية</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="ad-banner top-ad">
+      <span class="ad-label">مساحة إعلانية (Google AdSense Ready)</span>
+      <p>إعلان استراتيجي أعلى أداة اللياقة البدنية</p>
+    </div>
+
+    <div class="main-grid">
+      <section class="card form-section">
+        <h3>⚖️ أدخل بياناتك لتقييم كتلة الجسم</h3>
+        <form id="bmiForm">
+          <div class="input-row" style="grid-template-columns: 1fr 1fr;">
+            <div class="form-group">
+              <label for="weight">الوزن الحالي (كجم)</label>
+              <input type="number" id="weight" value="78" min="30" max="300" required>
+            </div>
+            <div class="form-group">
+              <label for="height">الطول (سم)</label>
+              <input type="number" id="height" value="175" min="100" max="230" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="age">العمر (سنة)</label>
+            <input type="number" id="age" value="24" min="10" max="100" required>
+          </div>
+          <button type="submit" class="btn-submit" style="background-color: #10b981; color: #fff;">احسب المؤشر والتقييم 🔍</button>
+        </form>
+      </section>
+
+      <section class="card results-section">
+        <h3>📊 نتيجة تحليل الجسم (BMI)</h3>
+        <div class="results-grid">
+          <div class="result-box primary">
+            <h4>قيمة مؤشر الكتلة (BMI)</h4>
+            <div class="value" id="bmiValue">25.5</div>
+          </div>
+          <div class="result-box secondary">
+            <h4>الحالة البدنية</h4>
+            <div id="bmiStatusContainer">
+              <span class="bmi-badge status-overweight" id="bmiStatusText">وزن زائد (Overweight)</span>
+            </div>
+          </div>
+        </div>
+        <div class="breakdown-card">
+          <h4>ملاحظات هامة لشباب الجيم والرياضيين:</h4>
+          <p id="bmiAdvice" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+            إذا كنت تمارس رياضة بناء الأجسام ولديك كتلة عضلية كبيرة، فقد يظهر مؤشر BMI مرتفعاً خطأً لأن العضلات أثقل من الدهون. اعتمد على قياس نسبة الدهون الحقيقية للمزيد من الدقة.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <div class="ad-banner bottom-ad">
+      <span class="ad-label">مساحة إعلانية (Footer Ad)</span>
+      <p>إعلان أسفل صفحة المؤشر البدني</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 موقع أدواتك.Tools - جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+  <script src="script_bmi.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أدواتك | حاسبة السعرات الحرارية والماء والماكروز</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <span class="icon">🥗</span>
+        <h2>أدواتك<span>.Tools</span></h2>
+      </div>
+      <p class="tagline">حاسبة السعرات الحرارية والماء والماكروز</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="ad-banner top-ad">
+      <span class="ad-label">مساحة إعلانية (Google AdSense Ready)</span>
+      <p>إعلان أعلى حاسبة السعرات</p>
+    </div>
+
+    <div class="main-grid">
+      <section class="card form-section">
+        <h3>📝 أدخل بياناتك الشخصية</h3>
+        <form id="caloriesForm">
+          <div class="form-group">
+            <label for="gender">النوع</label>
+            <select id="gender">
+              <option value="male">ذكر</option>
+              <option value="female">أنثى</option>
+            </select>
+          </div>
+          <div class="input-row" style="grid-template-columns: 1fr 1fr 1fr;">
+            <div class="form-group">
+              <label for="weight">الوزن (كجم)</label>
+              <input type="number" id="weight" value="75" required>
+            </div>
+            <div class="form-group">
+              <label for="height">الطول (سم)</label>
+              <input type="number" id="height" value="175" required>
+            </div>
+            <div class="form-group">
+              <label for="age">العمر</label>
+              <input type="number" id="age" value="25" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="activity">مستوى النشاط اليومي</label>
+            <select id="activity">
+              <option value="1.2">خامل (بدون تمرين)</option>
+              <option value="1.375">نشاط خفيف (1-3 أيام)</option>
+              <option value="1.55" selected>نشاط متوسط (3-5 أيام)</option>
+              <option value="1.725">نشاط عالي (6-7 أيام)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-submit">احسب السعرات والاحتياج 🔥</button>
+        </form>
+      </section>
+
+      <section class="card results-section">
+        <h3>📊 النتائج اليومية</h3>
+        <div class="results-grid">
+          <div class="result-box">
+            <h4>السعرات اليومية (TDEE)</h4>
+            <div class="value" id="tdeeValue">2,450 <span>سعرة</span></div>
+          </div>
+          <div class="result-box">
+            <h4>احتياج الماء اليومي</h4>
+            <div class="value" id="waterValue">2.8 <span>لتر</span></div>
+          </div>
+        </div>
+        <div class="breakdown-card">
+          <h4>توزيع الماكروز اليومي:</h4>
+          <ul>
+            <li><span>بروتين:</span> <b id="proteinVal">150 جرام</b></li>
+            <li><span>كربوهيدرات:</span> <b id="carbsVal">250 جرام</b></li>
+            <li><span>دهون صحية:</span> <b id="fatsVal">70 جرام</b></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="ad-banner bottom-ad">
+      <span class="ad-label">مساحة إعلانية (Footer Ad)</span>
+      <p>إعلان أسفل الصفحة</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 موقع أدواتك.Tools - جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+  <script src="script_calories.js"></script>
+</body>
+</html>

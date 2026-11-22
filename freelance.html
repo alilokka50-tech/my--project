@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أدواتك | حاسبة تسعير العمل الحر</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <span class="icon">💼</span>
+        <h2>أدواتك<span>.Tools</span></h2>
+      </div>
+      <p class="tagline">حاسبة تسعير خدمات العمل الحر والمشاريع</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="ad-banner top-ad">
+      <span class="ad-label">مساحة إعلانية (Google AdSense Ready)</span>
+      <p>إعلان أعلى حاسبة العمل الحر</p>
+    </div>
+
+    <div class="main-grid">
+      <section class="card form-section">
+        <h3>💰 حدد أهدافك المالية</h3>
+        <form id="freelanceForm">
+          <div class="form-group">
+            <label for="targetIncome">الدخل الشهري المستهدف ($)</label>
+            <input type="number" id="targetIncome" value="1500" required>
+          </div>
+          <div class="form-group">
+            <label for="billableHours">ساعات العمل القابلة للفوترة أسبوعياً</label>
+            <input type="number" id="billableHours" value="25" required>
+          </div>
+          <div class="form-group">
+            <label for="projectHours">ساعات العمل التقديرية للمشروع الحالي</label>
+            <input type="number" id="projectHours" value="20" required>
+          </div>
+          <button type="submit" class="btn-submit">احسب التسعير العادل 💼</button>
+        </form>
+      </section>
+
+      <section class="card results-section">
+        <h3>📈 نتائج التسعير المقترح</h3>
+        <div class="results-grid">
+          <div class="result-box">
+            <h4>سعر الساعة المقترح</h4>
+            <div class="value" id="hourlyRate">$15.00</div>
+          </div>
+          <div class="result-box">
+            <h4>تسعير المشروع الكامل</h4>
+            <div class="value" id="projectQuote">$300.00</div>
+          </div>
+        </div>
+        <div class="breakdown-card">
+          <h4>تفاصيل الحساب:</h4>
+          <ul>
+            <li><span>ساعات العمل الشهرية:</span> <b id="monthlyHours">100 ساعة</b></li>
+            <li><span>هامش أمان مقترح (15%):</span> <b id="bufferRate">$345.00</b></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="ad-banner bottom-ad">
+      <span class="ad-label">مساحة إعلانية (Footer Ad)</span>
+      <p>إعلان أسفل الصفحة</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 موقع أدواتك.Tools - جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+  <script src="script_freelance.js"></script>
+</body>
+</html>
